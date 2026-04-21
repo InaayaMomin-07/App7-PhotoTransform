@@ -105,8 +105,9 @@
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
-          /*Get the pixel data from the second canvas*/
+          /*Gets the pixel data from the canvas. The area is 600 pixels wide and 500 pixels long.*/
           var imageData = context2.getImageData(0, 0, 600, 500);
+          /*Holds list of colors for every pixel*/
           var data = imageData.data;
 
          for (var i = 0; i < data.length; i += 4) {
@@ -156,7 +157,7 @@
         context.fillText("Original image will go here", 10, 20);
       </script>
 
-     <canvas id="dataCanvas" width=600 height=500 style"border:1px solid #d3d3d3;"></canvas>
+     <canvas id="dataCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script>
        var canvas2 = document.getElementById('dataCanvas');
        var context2 = canvas2.getContext("2d");
