@@ -110,13 +110,19 @@
           /*Holds list of colors for every pixel*/
           var data = imageData.data;
 
+         /*Loops through the list. The +4 indicates the parts of the pixel such as red, green, blue and transparent.*/
          for (var i = 0; i < data.length; i += 4) {
 
+         /*Red is set to 0.*/
          data[i] = 0; 
+         /*Green is set to 0.*/
          data[i + 1] = 0;
+         /*Blue and transparency values are unchanged so they can appear in Canvas 2.*/
          }
 
+         /*Confirms if processing is complete.*/
          console.log("Image processed");
+         /*Inserts the modified images onto Canvas 2.*/
          context2.putImageData(imageData, 0, 0);
  
         } // end of img.onload
